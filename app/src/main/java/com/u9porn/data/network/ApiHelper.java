@@ -13,12 +13,12 @@ import com.u9porn.data.model.pxgav.PxgavVideoParserJsonResult;
 import com.u9porn.data.model.PinnedHeaderEntity;
 import com.u9porn.data.model.F9PornContent;
 import com.u9porn.data.model.ProxyModel;
-import com.u9porn.data.db.entity.V9PornItem;
 import com.u9porn.data.model.UpdateVersion;
 import com.u9porn.data.model.User;
 import com.u9porn.data.model.VideoComment;
-import com.u9porn.data.db.entity.VideoResult;
 import com.u9porn.data.model.axgle.AxgleResponse;
+import com.u9porn.data.objectbox.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.VideoResult;
 
 import java.util.List;
 

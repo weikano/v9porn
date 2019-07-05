@@ -13,7 +13,6 @@ import com.u9porn.cookie.CookieManager;
 import com.u9porn.data.AppDataManager;
 import com.u9porn.data.DataManager;
 import com.u9porn.data.cache.CacheProviders;
-import com.u9porn.data.db.AppDbHelper;
 import com.u9porn.data.db.DbHelper;
 import com.u9porn.data.network.ApiHelper;
 import com.u9porn.data.network.AppApiHelper;
@@ -108,7 +107,7 @@ public abstract class ApplicationModule {
 
     @Provides
     @Singleton
-    static DbHelper provideDbHelper(AppDbHelper appDbHelper) {
+    static DbHelper provideDbHelper(DbHelper appDbHelper) {
         return appDbHelper;
     }
 

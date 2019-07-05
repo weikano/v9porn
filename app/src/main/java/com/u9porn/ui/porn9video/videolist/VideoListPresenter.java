@@ -6,7 +6,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 import com.orhanobut.logger.Logger;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.rxjava.CallBackWrapper;
 import com.u9porn.rxjava.RetryWhenProcess;
 import com.u9porn.rxjava.RxSchedulersHelper;

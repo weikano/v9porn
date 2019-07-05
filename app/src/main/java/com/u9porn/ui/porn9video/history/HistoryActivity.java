@@ -10,7 +10,7 @@ import com.aitsuki.swipe.SwipeMenuRecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.u9porn.R;
 import com.u9porn.adapter.HistoryAdapter;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.ui.MvpActivity;
 
 import java.util.ArrayList;

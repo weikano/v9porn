@@ -31,7 +31,7 @@ import com.u9porn.BuildConfig;
 import com.u9porn.R;
 import com.u9porn.adapter.BaseMainFragmentAdapter;
 import com.u9porn.adapter.SortCategoryAdapter;
-import com.u9porn.data.db.entity.Category;
+import com.u9porn.data.objectbox.entity.Category;
 import com.u9porn.eventbus.LowMemoryEvent;
 import com.u9porn.ui.MvpFragment;
 import com.u9porn.utils.AnimationUtils;
@@ -243,7 +243,7 @@ public abstract class BaseMainFragment extends MvpFragment<BaseMainView, BaseMai
             }
             //在检查是否可见
             Category oldCategory = presenter.findCategoryById(category.getId());
-            if (oldCategory.getIsShow() != category.getIsShow()) {
+            if (oldCategory.isShow() != category.isShow()) {
                 needUpdate = true;
             }
         }

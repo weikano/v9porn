@@ -29,9 +29,9 @@ import com.u9porn.R;
 import com.u9porn.adapter.PlayFragmentAdapter;
 import com.u9porn.constants.Keys;
 import com.u9porn.constants.KeysActivityRequestResultCode;
-import com.u9porn.data.db.entity.Category;
-import com.u9porn.data.db.entity.V9PornItem;
-import com.u9porn.data.db.entity.VideoResult;
+import com.u9porn.data.objectbox.entity.Category;
+import com.u9porn.data.objectbox.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.VideoResult;
 import com.u9porn.service.DownloadVideoService;
 import com.u9porn.ui.MvpActivity;
 import com.u9porn.ui.porn9video.author.AuthorFragment;
@@ -124,8 +124,8 @@ public abstract class BasePlayVideo extends MvpActivity<PlayVideoView, PlayVideo
     }
 
     private void initIntentData() {
-        v9PornItem = (V9PornItem) getIntent().getSerializableExtra(Keys.KEY_INTENT_V9PORN_ITEM);
-        category = (Category) getIntent().getSerializableExtra(Keys.KEY_INTENT_CATEGORY_ITEM);
+        v9PornItem = (V9PornItem) getIntent().getParcelableExtra(Keys.KEY_INTENT_V9PORN_ITEM);
+        category = (Category) getIntent().getParcelableExtra(Keys.KEY_INTENT_CATEGORY_ITEM);
         skipPage = getIntent().getIntExtra(Keys.KEY_INTENT_SKIP_PAGE, 0);
         position = getIntent().getIntExtra(Keys.KEY_INTENT_SCROLL_TO_POSITION, 0);
     }

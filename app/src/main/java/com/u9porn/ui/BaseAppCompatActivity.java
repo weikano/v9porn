@@ -15,7 +15,7 @@ import com.jaeger.library.StatusBarUtil;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.constants.Keys;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.utils.PlaybackEngine;
 
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;

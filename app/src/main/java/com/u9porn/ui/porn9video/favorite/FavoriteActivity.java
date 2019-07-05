@@ -19,7 +19,7 @@ import com.helper.loadviewhelper.load.LoadViewHelper;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.adapter.FavoriteAdapter;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.ui.MvpActivity;
 import com.u9porn.utils.DialogUtils;
 import com.u9porn.utils.LoadHelperUtils;

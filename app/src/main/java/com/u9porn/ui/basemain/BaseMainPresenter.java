@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
 import com.u9porn.data.DataManager;
-import com.u9porn.data.db.entity.Category;
+import com.u9porn.data.objectbox.entity.Category;
 
 import java.util.List;
 

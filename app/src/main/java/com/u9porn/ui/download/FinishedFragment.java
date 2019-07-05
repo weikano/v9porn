@@ -25,7 +25,7 @@ import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.adapter.DownloadVideoAdapter;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.service.DownloadVideoService;
 import com.u9porn.ui.MvpFragment;
 import com.u9porn.utils.DownloadManager;

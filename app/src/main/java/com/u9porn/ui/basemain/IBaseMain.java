@@ -1,6 +1,6 @@
 package com.u9porn.ui.basemain;
 
-import com.u9porn.data.db.entity.Category;
+import com.u9porn.data.objectbox.entity.Category;
 
 import java.util.List;
 

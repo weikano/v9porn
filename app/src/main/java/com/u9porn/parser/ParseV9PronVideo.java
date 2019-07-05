@@ -4,8 +4,8 @@ import android.text.TextUtils;
 import android.util.Base64;
 
 import com.orhanobut.logger.Logger;
-import com.u9porn.data.db.entity.V9PornItem;
-import com.u9porn.data.db.entity.VideoResult;
+import com.u9porn.data.objectbox.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.VideoResult;
 import com.u9porn.data.model.BaseResult;
 import com.u9porn.data.model.User;
 import com.u9porn.data.model.VideoComment;

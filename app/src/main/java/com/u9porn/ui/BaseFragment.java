@@ -11,8 +11,8 @@ import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.constants.Keys;
-import com.u9porn.data.db.entity.Category;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.Category;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.ui.download.DownloadActivity;
 import com.u9porn.ui.main.MainActivity;
 import com.u9porn.ui.porn9video.play.BasePlayVideo;
@@ -46,7 +46,7 @@ public abstract class BaseFragment extends DaggerFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
-            category = (Category) savedInstanceState.getSerializable(KEY_SAVE_DIN_STANCE_STATE_CATEGORY);
+            category = (Category) savedInstanceState.getParcelable(KEY_SAVE_DIN_STANCE_STATE_CATEGORY);
         }
 
     }
@@ -54,7 +54,7 @@ public abstract class BaseFragment extends DaggerFragment {
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(KEY_SAVE_DIN_STANCE_STATE_CATEGORY, category);
+        outState.putParcelable(KEY_SAVE_DIN_STANCE_STATE_CATEGORY, category);
     }
 
 

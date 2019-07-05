@@ -1,5 +1,6 @@
 package com.u9porn;
 
+import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatDelegate;
@@ -8,6 +9,7 @@ import com.helper.loadviewhelper.load.LoadViewHelper;
 import com.liulishuo.filedownloader.FileDownloader;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.u9porn.data.DataManager;
+//import com.u9porn.di.component.DaggerAppComponent;
 import com.u9porn.di.component.DaggerAppComponent;
 import com.u9porn.eventbus.LowMemoryEvent;
 import com.u9porn.utils.AppLogger;
@@ -18,6 +20,7 @@ import javax.inject.Inject;
 
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.DaggerApplication;
 
 /**

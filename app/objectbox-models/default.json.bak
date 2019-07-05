@@ -1,0 +1,208 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:486012935109351916",
+      "lastPropertyId": "7:5508147564340526389",
+      "name": "Category",
+      "properties": [
+        {
+          "id": "1:7346773499265155697",
+          "name": "id"
+        },
+        {
+          "id": "2:342148491301080401",
+          "name": "categoryType"
+        },
+        {
+          "id": "3:28299037947721595",
+          "name": "categoryName"
+        },
+        {
+          "id": "4:8076454060841848212",
+          "name": "categoryValue"
+        },
+        {
+          "id": "5:4790443796530689236",
+          "name": "categoryUrl"
+        },
+        {
+          "id": "6:708584438730690563",
+          "name": "sortId"
+        },
+        {
+          "id": "7:5508147564340526389",
+          "name": "isSHow"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7411620555397962948",
+      "lastPropertyId": "16:1259422022378873921",
+      "name": "V9PornItem",
+      "properties": [
+        {
+          "id": "1:1243240186103120470",
+          "name": "id"
+        },
+        {
+          "id": "2:3380716727362583639",
+          "indexId": "1:7488323385015898263",
+          "name": "viewKey"
+        },
+        {
+          "id": "3:945889676745776261",
+          "name": "title"
+        },
+        {
+          "id": "4:7472006008708394495",
+          "name": "imgUrl"
+        },
+        {
+          "id": "5:773379283052036664",
+          "name": "duration"
+        },
+        {
+          "id": "6:1459144791232962123",
+          "name": "info"
+        },
+        {
+          "id": "7:9194234267283272708",
+          "name": "videoResultId"
+        },
+        {
+          "id": "8:4677044386249989311",
+          "name": "downloadId"
+        },
+        {
+          "id": "9:404706624417225526",
+          "name": "progress"
+        },
+        {
+          "id": "10:4229340283467814801",
+          "name": "speed"
+        },
+        {
+          "id": "11:7118142576333934927",
+          "name": "soFarBytes"
+        },
+        {
+          "id": "12:8629483566195538720",
+          "name": "totalFarBytes"
+        },
+        {
+          "id": "13:4156554209907448299",
+          "name": "status"
+        },
+        {
+          "id": "14:4349406075350741229",
+          "name": "addDownloadDate"
+        },
+        {
+          "id": "15:1082770188496207956",
+          "name": "finishedDownloadDate"
+        },
+        {
+          "id": "16:1259422022378873921",
+          "name": "viewHistoryDate"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:4490626410289459317",
+      "lastPropertyId": "10:1576193949740315726",
+      "name": "VideoResult",
+      "properties": [
+        {
+          "id": "1:4426018755999009506",
+          "name": "id"
+        },
+        {
+          "id": "2:7089728342476078469",
+          "name": "videoUrl"
+        },
+        {
+          "id": "3:8078384932432105338",
+          "name": "videoId"
+        },
+        {
+          "id": "4:8165009406634593837",
+          "name": "ownerId"
+        },
+        {
+          "id": "5:5750274984522656004",
+          "name": "authorId"
+        },
+        {
+          "id": "6:2992485918336098365",
+          "name": "thumbImgUrl"
+        },
+        {
+          "id": "7:7738880949052686243",
+          "name": "videoName"
+        },
+        {
+          "id": "8:4033318161076145300",
+          "name": "ownerName"
+        },
+        {
+          "id": "9:872623203902324452",
+          "name": "addDate"
+        },
+        {
+          "id": "10:1576193949740315726",
+          "name": "userOtherInfo"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:55707859359343907",
+      "lastPropertyId": "6:1471228810064342742",
+      "name": "AutoCompleteEntity",
+      "properties": [
+        {
+          "id": "1:3985019372067913134",
+          "name": "id"
+        },
+        {
+          "id": "2:3737705202537839115",
+          "indexId": "2:9110824825686585515",
+          "name": "name"
+        },
+        {
+          "id": "3:8272922846048378682",
+          "name": "useTime"
+        },
+        {
+          "id": "4:1988636520235345659",
+          "name": "type"
+        },
+        {
+          "id": "5:6837811474358760841",
+          "name": "addDate"
+        },
+        {
+          "id": "6:1471228810064342742",
+          "name": "updateDate"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:55707859359343907",
+  "lastIndexId": "2:9110824825686585515",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

@@ -16,18 +16,18 @@ import dagger.android.AndroidInjector;
 import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
-@Component( modules = {ApplicationModule.class, ApiServiceModule.class, ActivityBindingModule.class,ServiceBindingModule.class, AndroidSupportInjectionModule.class})
+@Component(modules = {ApplicationModule.class, ApiServiceModule.class, ActivityBindingModule.class, ServiceBindingModule.class, AndroidSupportInjectionModule.class})
 public interface AppComponent extends AndroidInjector<MyApplication> {
 
-    @Override
-    void inject(MyApplication instance);
+  @Override
+  void inject(MyApplication instance);
 
-    @Component.Builder
-    interface Builder {
+  @Component.Builder
+  interface Builder {
 
-        @BindsInstance
-        AppComponent.Builder application(Application application);
+    @BindsInstance
+    AppComponent.Builder application(Application application);
 
-        AppComponent build();
-    }
+    AppComponent build();
+  }
 }

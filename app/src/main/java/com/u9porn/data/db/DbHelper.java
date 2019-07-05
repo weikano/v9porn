@@ -1,8 +1,8 @@
 package com.u9porn.data.db;
 
-import com.u9porn.data.db.entity.Category;
-import com.u9porn.data.db.entity.V9PornItem;
-import com.u9porn.data.db.entity.VideoResult;
+import com.u9porn.data.objectbox.entity.Category;
+import com.u9porn.data.objectbox.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.VideoResult;
 
 import java.util.List;
 

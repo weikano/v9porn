@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.u9porn.R;
-import com.u9porn.data.db.entity.Category;
+import com.u9porn.data.objectbox.entity.Category;
 
 import java.util.List;
 
@@ -35,10 +35,10 @@ public class SortCategoryAdapter extends BaseQuickAdapter<Category, BaseViewHold
         switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                category.setIsShow(isChecked);
+                category.setShow(isChecked);
             }
         });
-        switchCompat.setChecked(category.getIsShow());
+        switchCompat.setChecked(category.isShow());
         ImageView imageView = helper.getView(R.id.iv_drag_handle);
 
         imageView.setOnTouchListener(new View.OnTouchListener() {

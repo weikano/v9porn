@@ -17,7 +17,7 @@ import com.orhanobut.logger.Logger;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.u9porn.R;
 import com.u9porn.adapter.V91PornAdapter;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.ui.MvpFragment;
 import com.u9porn.ui.porn9video.play.BasePlayVideo;
 import com.u9porn.utils.AppUtils;

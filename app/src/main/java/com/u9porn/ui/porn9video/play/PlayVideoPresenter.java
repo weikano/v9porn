@@ -9,8 +9,8 @@ import com.orhanobut.logger.Logger;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.u9porn.data.DataManager;
-import com.u9porn.data.db.entity.V9PornItem;
-import com.u9porn.data.db.entity.VideoResult;
+import com.u9porn.data.objectbox.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.VideoResult;
 import com.u9porn.data.model.User;
 import com.u9porn.exception.VideoException;
 import com.u9porn.rxjava.CallBackWrapper;
@@ -60,7 +60,7 @@ public class PlayVideoPresenter extends MvpBasePresenter<PlayVideoView> implemen
         dataManager.loadPorn9VideoUrl(viewKey)
                 .map(videoResult -> {
                     if (TextUtils.isEmpty(videoResult.getVideoUrl())) {
-                        if (VideoResult.OUT_OF_WATCH_TIMES.equals(videoResult.getId())) {
+                        if (VideoResult.OUT_OF_WATCH_TIMES == (videoResult.getId())) {
                             //尝试强行重置，并上报异常
                             dataManager.resetPorn91VideoWatchTime(true);
                             // Bugsnag.notify(new Throwable(TAG + "Ten videos each day address: " + dataManager.getPorn9VideoAddress()), Severity.WARNING);

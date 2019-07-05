@@ -26,7 +26,7 @@ import com.u9porn.R;
 import com.u9porn.adapter.VideoCommentAdapter;
 import com.u9porn.constants.Keys;
 import com.u9porn.constants.KeysActivityRequestResultCode;
-import com.u9porn.data.db.entity.V9PornItem;
+import com.u9porn.data.objectbox.entity.V9PornItem;
 import com.u9porn.data.model.VideoComment;
 import com.u9porn.ui.MvpFragment;
 import com.u9porn.ui.porn9video.user.UserLoginActivity;
