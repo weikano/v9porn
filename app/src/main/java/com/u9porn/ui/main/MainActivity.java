@@ -68,8 +68,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 /**
  * @author flymegoc
@@ -78,11 +78,8 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    @BindView(R.id.bottom_navigation_bar)
     BottomNavigationBar bottomNavigationBar;
-    @BindView(R.id.fab_search)
     FloatingActionButton fabSearch;
-    @BindView(R.id.content)
     FrameLayout contentFrameLayout;
 
     private Fragment mCurrentFragment;
@@ -116,7 +113,10 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
         setContentView(R.layout.activity_main);
         NotificationChannelHelper.initChannel(this);
         EventBus.getDefault().register(this);
-        ButterKnife.bind(this);
+        bottomNavigationBar = findViewById(R.id.bottom_navigation_bar);
+        fabSearch = findViewById(R.id.fab_search);
+        contentFrameLayout = findViewById(R.id.content);
+//        ButterKnife.bind(this);
         firstTagsArray.add(Tags.TAG_SEARCH_PORN_AXGLE_VIDEO);
         firstTagsArray.add(Tags.TAG_MY_DOWNLOAD);
         firstTagsArray.add(Tags.TAG_PRON_9_VIDEO);

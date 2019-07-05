@@ -33,8 +33,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cn.qqtheme.framework.picker.FilePicker;
 import cn.qqtheme.framework.util.StorageUtils;
 import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
@@ -46,11 +44,8 @@ import okhttp3.HttpUrl;
 public class SettingActivity extends MvpActivity<SettingView, SettingPresenter> implements View.OnClickListener, SettingView {
 
     private static final String TAG = SettingActivity.class.getSimpleName();
-    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.mine_list)
     QMUIGroupListView qmuiGroupListView;
-    @BindView(R.id.bt_setting_exit_account)
     Button btSettingExitAccount;
 
     @Inject
@@ -65,7 +60,9 @@ public class SettingActivity extends MvpActivity<SettingView, SettingPresenter> 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-        ButterKnife.bind(this);
+        toolbar = findViewById(R.id.toolbar);
+        qmuiGroupListView = findViewById(R.id.mine_list);
+        btSettingExitAccount = findViewById(R.id.bt_setting_exit_account);
         initToolBar(toolbar);
         initSettingSection();
         initListener();
@@ -131,12 +128,7 @@ public class SettingActivity extends MvpActivity<SettingView, SettingPresenter> 
         t6yAddressItemWithChevron.setDetailText("暂未支持，敬请期待");
         t6yAddressItemWithChevron.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
 
-        tsec.addItemView(addressItemWithChevron, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showAddressSettingDialog((QMUICommonListItemView) v, AppPreferencesHelper.KEY_SP_PORN_91_VIDEO_ADDRESS);
-            }
-        });
+        tsec.addItemView(addressItemWithChevron, v -> showAddressSettingDialog((QMUICommonListItemView) v, AppPreferencesHelper.KEY_SP_PORN_91_VIDEO_ADDRESS));
         tsec.addItemView(forumAddressItemWithChevron, new View.OnClickListener() {
             @Override
             public void onClick(View v) {

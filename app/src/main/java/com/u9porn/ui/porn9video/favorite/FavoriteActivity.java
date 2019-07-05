@@ -29,19 +29,14 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * @author flymegoc
  */
 public class FavoriteActivity extends MvpActivity<FavoriteView, FavoritePresenter> implements FavoriteView, SwipeRefreshLayout.OnRefreshListener {
 
-    @BindView(R.id.recyclerView)
     SwipeMenuRecyclerView recyclerView;
-    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.contentView)
     SwipeRefreshLayout contentView;
 
     private FavoriteAdapter mUnLimit91Adapter;
@@ -56,7 +51,9 @@ public class FavoriteActivity extends MvpActivity<FavoriteView, FavoritePresente
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
-        ButterKnife.bind(this);
+        toolbar = findViewById(R.id.toolbar);
+        recyclerView = findViewById(R.id.recyclerView);
+        contentView = findViewById(R.id.contentView);
         deleteAlertDialog = DialogUtils.initLoadingDialog(this, "删除中，请稍后...");
         initToolBar(toolbar);
         toolbar.setContentInsetStartWithNavigation(0);

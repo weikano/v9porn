@@ -51,6 +51,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 /**
  * @author flymegoc
  */

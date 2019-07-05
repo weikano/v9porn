@@ -44,8 +44,6 @@ import java.util.Locale;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import de.greenrobot.common.io.FileUtils;
 import ru.noties.markwon.Markwon;
 
@@ -55,14 +53,10 @@ import ru.noties.markwon.Markwon;
 public class AboutActivity extends MvpActivity<AboutView, AboutPresenter> implements AboutView {
 
     private static final String TAG = AboutActivity.class.getSimpleName();
-    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    @BindView(R.id.version)
     TextView mVersionTextView;
-    @BindView(R.id.about_list)
     QMUIGroupListView mAboutGroupListView;
-    @BindView(R.id.copyright)
     TextView mCopyrightTextView;
 
     private AlertDialog alertDialog;
@@ -79,7 +73,10 @@ public class AboutActivity extends MvpActivity<AboutView, AboutPresenter> implem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        ButterKnife.bind(this);
+        toolbar = findViewById(R.id.toolbar);
+        mVersionTextView = findViewById(R.id.version);
+        mAboutGroupListView = findViewById(R.id.about_list);
+        mCopyrightTextView = findViewById(R.id.copyright);
 
         initToolBar(toolbar);
 

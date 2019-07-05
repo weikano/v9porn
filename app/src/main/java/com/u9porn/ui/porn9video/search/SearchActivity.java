@@ -31,8 +31,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * @author flymegoc
@@ -40,15 +38,10 @@ import butterknife.ButterKnife;
 public class SearchActivity extends MvpActivity<SearchView, SearchPresenter> implements SearchView {
 
     private static final String TAG = SearchActivity.class.getSimpleName();
-    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.search_view)
     android.support.v7.widget.SearchView searchView;
-    @BindView(R.id.nice_spinner_search)
     NiceSpinner niceSpinnerSearch;
-    @BindView(R.id.nice_spinner_sort_by)
     NiceSpinner niceSpinnerSortBy;
-    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
     private String searchId;
     private String sort = "addate";
@@ -62,7 +55,11 @@ public class SearchActivity extends MvpActivity<SearchView, SearchPresenter> imp
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        ButterKnife.bind(this);
+        toolbar = findViewById(R.id.toolbar);
+        searchView = findViewById(R.id.search_view);
+        niceSpinnerSearch = findViewById(R.id.nice_spinner_search);
+        niceSpinnerSortBy = findViewById(R.id.nice_spinner_sort_by);
+        recyclerView = findViewById(R.id.recyclerView);
         init();
         setListener();
         boolean isFirst = presenter.isFirstInSearchPorn91Video();

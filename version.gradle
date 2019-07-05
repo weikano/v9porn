@@ -56,6 +56,7 @@ ext {
     androidx_core               : "androidx.core:core-ktx:${libraryVersion.androidx_core}",
     androidx_contraintlayout    : "androidx.constraintlayout:constraintlayout:${libraryVersion.androidx_contraintlayout}",
     leakcanary                  : "com.squareup.leakcanary:leakcanary-android:${libraryVersion.leakcanary}",
+    leakcanary_noop             : "com.squareup.leakcanary:leakcanary-android-no-op:${libraryVersion.leakcanary}",
     arouter                     : "com.alibaba:arouter-api:${libraryVersion.arouter}",
     arouter_processor           : "com.alibaba:arouter-compiler:${libraryVersion.arouter_processor}",
     arouter_register            : "com.alibaba:arouter-register:${libraryVersion.arouter_register}",

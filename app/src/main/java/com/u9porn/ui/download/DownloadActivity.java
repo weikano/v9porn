@@ -15,8 +15,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * @author flymegoc
@@ -25,11 +23,8 @@ public class DownloadActivity extends BaseAppCompatActivity {
 
     private static final String TAG = DownloadActivity.class.getSimpleName();
 
-    @BindView(R.id.download_viewpager)
     ViewPager downloadViewpager;
-    @BindView(R.id.download_tab)
     TabLayout downloadTab;
-    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
     @Inject
@@ -48,8 +43,11 @@ public class DownloadActivity extends BaseAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
-        ButterKnife.bind(this);
+        downloadViewpager = findViewById(R.id.download_viewpager);
+        downloadTab = findViewById(R.id.download_tab);
+        toolbar = findViewById(R.id.toolbar);
         initToolBar(toolbar);
+
 
         fragmentList.add(downloadingFragment);
         fragmentList.add(finishedFragment);

@@ -18,9 +18,6 @@ import java.io.Serializable;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * @author flymegoc
@@ -31,14 +28,16 @@ public class SplashActivity extends MvpActivity<SplashView, SplashPresenter> imp
 
     @Inject
     protected SplashPresenter splashPresenter;
-    @BindView(R.id.bt_skip_splash)
     Button btSkipSplash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        ButterKnife.bind(this);
+        btSkipSplash = findViewById(R.id.bt_skip_splash);
+        btSkipSplash.setOnClickListener(v->{
+            onViewClicked();
+        });
         findViewById(android.R.id.content).setPadding(0, 0, 0, 0);
         checkUpdate();
 
@@ -136,7 +135,6 @@ public class SplashActivity extends MvpActivity<SplashView, SplashPresenter> imp
         super.showMessage(msg, type);
     }
 
-    @OnClick(R.id.bt_skip_splash)
     public void onViewClicked() {
         Intent intent = new Intent(this, MainActivity.class);
         //intent.putExtra(key, serializable);
